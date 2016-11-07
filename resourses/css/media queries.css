@@ -1,0 +1,42 @@
+@media screen and (max-width: 820px) {
+  .navContainer {
+    height: auto; }
+    .navContainer p {
+      display: block;
+      text-align: center; }
+    .navContainer nav {
+      display: flex;
+      flex-direction: column;
+      position: static;
+      align-items: center; }
+      .navContainer nav a {
+        margin-bottom: 15px; }
+        .navContainer nav a:before {
+          display: none; }
+        .navContainer nav a:hover:before {
+          display: none; }
+
+  .procitajOpsirtine {
+    flex-direction: column; }
+    .procitajOpsirtine .btn {
+      margin: 0;
+      margin-top: 15px;
+      margin-left: 0 !important; }
+    .procitajOpsirtine p, .procitajOpsirtine h3 {
+      text-align: center; }
+
+  .section1 .section1Content {
+    justify-content: center; }
+
+  footer .footerContent {
+    justify-content: space-around; }
+    footer .footerContent div {
+      min-width: 205px; }
+
+  .mapaSajta a {
+    text-align: center; }
+
+  .unslider-arrow1 {
+    width: 26px; } }
+
+/*# sourceMappingURL=media%20queries.css.map */

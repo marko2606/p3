@@ -1,0 +1,313 @@
+@import 'partials/variables';
+
+
+
+/******************************************/
+/***** BASIC STYLE REUSABLE COMPONENTS*****/
+/******************************************/
+
+
+* {
+   margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+  color: darken($light, 20%);
+  font-size: 100%;
+  
+}
+
+.row {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase; 
+}
+
+.btn {
+    background-color: $red;
+    padding: 10px;
+    color: white;
+    display: inline-block;
+    font-size: 1em;
+}
+
+.logo {
+        line-height: $navHeight;
+        color: $red;
+        font-size: 2.5em;
+        font-weight: 600;
+    }
+
+h2, h3, h4 {
+    color: $dark;
+    text-align: center;
+}
+
+.slide1a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+/******************************************/
+/***** NAVIGATION STYLE *****/
+/******************************************/
+
+
+.navContainer {
+    position: relative;
+    height: $navHeight;
+    
+    p {
+        display: inline-block;
+    }
+    
+    nav {
+        height: 100%;
+        position: absolute;
+        right: 0;
+        display: inline-flex;
+        align-items: stretch;
+        a {
+            position: relative;
+            display: inline-flex;
+            font-size: .8em;
+            align-items: center;
+            margin: 0 10px;
+            color: $light;
+            font-weight: 700;
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 5px;
+                width: 100%;
+                background-color: $red;
+                display: none;
+            }
+            &:hover {
+                color: $dark;
+            }
+            &:hover:before {
+                display: block;
+            }
+        }
+        
+        i {
+            font-size: 2em;
+        }
+        .twitter {
+            color: $red;
+        }
+        .facebook {
+            color: black;
+        }
+        
+    }
+}
+
+
+/******************************************/
+/***** HERO STYLE *****/
+/******************************************/
+
+
+.hero {  
+    position: relative;
+    .slide1a {
+        border-bottom: 5px solid $red; 
+    }
+    
+    p {
+        font-weight: 100;
+        max-width: 63%;
+        color: darken($dwhite, 10%);
+        text-align: center;
+    }
+    a {
+        margin-top: 3%;
+    }
+}
+h1 {
+    color: $dwhite;
+    text-align: center;
+}
+
+
+/******************************************/
+/***** PROCITAJ OPSIRNIJE STYLE *****/
+/******************************************/
+
+
+.procitajOpsirnijeContainer {
+    background-color: $cream;
+    .procitajOpsirtine {
+        position: relative;
+        background-color: white;
+        bottom: 78px;
+        padding: 2%;
+        box-shadow: 0 7px 5px -2px gray;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .btn {
+            flex-basis: 25%;
+            margin-left: 20%;
+        }
+       }
+}
+
+
+/******************************************/
+/***** SECTION 1 STYLE *****/
+/******************************************/
+
+
+.section1 {
+    padding: 0px 0px 30px 0px;
+    background-color: $cream;
+    h2 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .section1Content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    .sectionItems {
+        width: 30%;
+        min-width: 268px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;       
+        .sectionUpper {
+            display: flex;
+            align-items: center;
+            h3 {
+                display: inline-block;
+                margin-left: 4%;
+                padding: 3% 0;
+            }   
+            
+            .sUpperImg {
+                img {
+                    display: block;
+                    margin: 0 auto;
+                }
+                height: 40px;
+                width: 40px;
+                background-color: $dark;
+                padding: 10px;
+                border-radius: 50%;
+            }
+        }
+        .sectionLower {
+            img {
+                width: 100%;
+            }
+        padding-left: 17%;
+                
+        }
+        p {
+            margin-top: 3%;
+        }
+    }
+        h3 {
+            display: inline-block;
+        } 
+    }
+}
+
+
+/******************************************/
+/***** SECTION 2 STYLE *****/
+/******************************************/
+
+
+.section2 {
+    background-color: white;
+    .section2Content {
+        padding: 88px 0px 68px 0px;
+        margin: 0 15px;
+        h2 {
+            margin-bottom: 15px;
+        }
+        p {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+    }
+    
+    
+}
+
+/******************************************/
+/***** FOOTER STYLE *****/
+/******************************************/
+
+footer {
+    padding: 30px 10px 50px 10px;
+    background-color: rgba(235, 235, 235, 0.19);
+    .footerContent {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        div {
+            margin: 15px; 
+        }
+        .logo {
+            line-height: normal;
+        }
+        h4 {
+            margin-bottom: 15px;
+        }
+        p {
+            margin-bottom: 5px;
+        }
+        .najnovijeVesti {
+            p {
+                padding: 10px 20px 10px 0px;
+                border-bottom: 1px solid black;
+                &:last-child {
+                    border: none;
+                }   
+                &:first-of-type {
+                    padding-top: 0px;
+                } 
+            }
+        }
+        .mapaSajta {
+            a {
+                margin-bottom: 5px;
+                display: block;
+                text-transform: capitalize;
+                color: $light;
+                &:hover {
+                    color: $red !important;
+                }
+                &:visited {
+                    color: $light;
+                }
+            }
+        }
+        .logo {
+            margin-bottom: 20px;
+        }
+        
+        b {
+            color: lighten($dark, 20%);
+        }
+    }
+}
+
+
+

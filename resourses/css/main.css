@@ -1,0 +1,220 @@
+/******************************************/
+/***** BASIC STYLE REUSABLE COMPONENTS*****/
+/******************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html, body {
+  color: #959595;
+  font-size: 100%; }
+
+.row {
+  max-width: 980px;
+  margin: 0 auto; }
+
+a {
+  text-decoration: none;
+  text-transform: uppercase; }
+
+.btn {
+  background-color: #ef475d;
+  padding: 10px;
+  color: white;
+  display: inline-block;
+  font-size: 1em; }
+
+.logo {
+  line-height: 90px;
+  color: #ef475d;
+  font-size: 2.5em;
+  font-weight: 600; }
+
+h2, h3, h4 {
+  color: #484848;
+  text-align: center; }
+
+.slide1a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+/******************************************/
+/***** NAVIGATION STYLE *****/
+/******************************************/
+.navContainer {
+  position: relative;
+  height: 90px; }
+  .navContainer p {
+    display: inline-block; }
+  .navContainer nav {
+    height: 100%;
+    position: absolute;
+    right: 0;
+    display: inline-flex;
+    align-items: stretch; }
+    .navContainer nav a {
+      position: relative;
+      display: inline-flex;
+      font-size: .8em;
+      align-items: center;
+      margin: 0 10px;
+      color: #c8c8c8;
+      font-weight: 700; }
+      .navContainer nav a:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 5px;
+        width: 100%;
+        background-color: #ef475d;
+        display: none; }
+      .navContainer nav a:hover {
+        color: #484848; }
+      .navContainer nav a:hover:before {
+        display: block; }
+    .navContainer nav i {
+      font-size: 2em; }
+    .navContainer nav .twitter {
+      color: #ef475d; }
+    .navContainer nav .facebook {
+      color: black; }
+
+/******************************************/
+/***** HERO STYLE *****/
+/******************************************/
+.hero {
+  position: relative; }
+  .hero .slide1a {
+    border-bottom: 5px solid #ef475d; }
+  .hero p {
+    font-weight: 100;
+    max-width: 63%;
+    color: #cccccc;
+    text-align: center; }
+  .hero a {
+    margin-top: 3%; }
+
+h1 {
+  color: #e6e6e6;
+  text-align: center; }
+
+/******************************************/
+/***** PROCITAJ OPSIRNIJE STYLE *****/
+/******************************************/
+.procitajOpsirnijeContainer {
+  background-color: #F4F4F4; }
+  .procitajOpsirnijeContainer .procitajOpsirtine {
+    position: relative;
+    background-color: white;
+    bottom: 78px;
+    padding: 2%;
+    box-shadow: 0 7px 5px -2px gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .procitajOpsirnijeContainer .procitajOpsirtine .btn {
+      flex-basis: 25%;
+      margin-left: 20%; }
+
+/******************************************/
+/***** SECTION 1 STYLE *****/
+/******************************************/
+.section1 {
+  padding: 0px 0px 30px 0px;
+  background-color: #F4F4F4; }
+  .section1 h2 {
+    text-align: center;
+    margin-bottom: 30px; }
+  .section1 .section1Content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    .section1 .section1Content .sectionItems {
+      width: 30%;
+      min-width: 268px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column; }
+      .section1 .section1Content .sectionItems .sectionUpper {
+        display: flex;
+        align-items: center; }
+        .section1 .section1Content .sectionItems .sectionUpper h3 {
+          display: inline-block;
+          margin-left: 4%;
+          padding: 3% 0; }
+        .section1 .section1Content .sectionItems .sectionUpper .sUpperImg {
+          height: 40px;
+          width: 40px;
+          background-color: #484848;
+          padding: 10px;
+          border-radius: 50%; }
+          .section1 .section1Content .sectionItems .sectionUpper .sUpperImg img {
+            display: block;
+            margin: 0 auto; }
+      .section1 .section1Content .sectionItems .sectionLower {
+        padding-left: 17%; }
+        .section1 .section1Content .sectionItems .sectionLower img {
+          width: 100%; }
+      .section1 .section1Content .sectionItems p {
+        margin-top: 3%; }
+    .section1 .section1Content h3 {
+      display: inline-block; }
+
+/******************************************/
+/***** SECTION 2 STYLE *****/
+/******************************************/
+.section2 {
+  background-color: white; }
+  .section2 .section2Content {
+    padding: 88px 0px 68px 0px;
+    margin: 0 15px; }
+    .section2 .section2Content h2 {
+      margin-bottom: 15px; }
+    .section2 .section2Content p {
+      margin-bottom: 30px;
+      text-align: center; }
+
+/******************************************/
+/***** FOOTER STYLE *****/
+/******************************************/
+footer {
+  padding: 30px 10px 50px 10px;
+  background-color: rgba(235, 235, 235, 0.19); }
+  footer .footerContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    footer .footerContent div {
+      margin: 15px; }
+    footer .footerContent .logo {
+      line-height: normal; }
+    footer .footerContent h4 {
+      margin-bottom: 15px; }
+    footer .footerContent p {
+      margin-bottom: 5px; }
+    footer .footerContent .najnovijeVesti p {
+      padding: 10px 20px 10px 0px;
+      border-bottom: 1px solid black; }
+      footer .footerContent .najnovijeVesti p:last-child {
+        border: none; }
+      footer .footerContent .najnovijeVesti p:first-of-type {
+        padding-top: 0px; }
+    footer .footerContent .mapaSajta a {
+      margin-bottom: 5px;
+      display: block;
+      text-transform: capitalize;
+      color: #c8c8c8; }
+      footer .footerContent .mapaSajta a:hover {
+        color: #ef475d !important; }
+      footer .footerContent .mapaSajta a:visited {
+        color: #c8c8c8; }
+    footer .footerContent .logo {
+      margin-bottom: 20px; }
+    footer .footerContent b {
+      color: #7b7b7b; }
+
+/*# sourceMappingURL=main.css.map */
