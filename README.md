@@ -209,10 +209,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 ```
 
 Activate plugin
-
 ```
-plugins: 
-  ```
     const HtmlWebpackPlugin = require('html-webpack-plugin');
 
     module.exports = {
