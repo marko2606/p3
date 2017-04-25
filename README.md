@@ -14,7 +14,7 @@ git checkout workshop1
 ```
 
 ## Table of Contents
-- [Requirements](#Requirements)
+- [Requirements](##Requirements)
 - [Basic information](#Basic information)
 - [Creating project](#Creating project)
 - [Get Started](#Get Started)
@@ -92,7 +92,6 @@ These concepts are properties of a weback module.
 
         ...
         
-        entry: './src/index.js',
         output: {
             path: path.resolve(__dirname, 'dist'),
             filename: 'bundle.js',
