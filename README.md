@@ -95,7 +95,6 @@ These concepts are properties of a weback module.
         output: {
             path: path.resolve(__dirname, 'dist'),
             filename: 'bundle.js',
-            publicPath: '/dist'
         }
 
         ...
@@ -118,17 +117,17 @@ These concepts are properties of a weback module.
           module: {
             rules: [
                 {
-			test: /\.js$/,
-			exclude: /node_modules/,
-			use: {
-				use: ['babel-loader'],
-				options: {
-				presets: ['env']
-				}
-			    }
+		    test: /\.js$/,
+		    exclude: /node_modules/,
+		    use: {
+			use: ['babel-loader'],
+			options: {
+			presets: ['env']
+			}
+		    }
 		}
             ]
-	    }
+	  }
 
         ...
 
@@ -178,7 +177,7 @@ create a build script in package.json
 
 ```
 "scirpt": {
-    "build": "webpack src/index.js dist/bundle.js"
+    "build": "webpack"
 }
 ```
 
@@ -233,6 +232,7 @@ Activate plugin
 Webpack will bundle our files into dist/bundle.js and also create a copy of index.html based on our configuration(Dinamicly change title from webpack);
 
 run build
+
 open index.html in dist
 
 
