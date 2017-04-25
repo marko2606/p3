@@ -18,21 +18,20 @@ git checkout workshop1
 - [Basic information](#Basic information)
 - [Creating project](#Creating project)
 - [Get Started](#Get Started)
-- ...
 - [Links](#links)
 
 
-##Requirements
+## Requirements
 
 You need to have NodeJS instaled.
 
-##Basic information
+## Basic information
 
 Webpack is a tool to build JavaScript modules in your application. It simplifies your workflow by quickly constructing a dependency graph of your application and bundling them in the right order. webpack can be configured to customise optimisations to your code, to split vendor/css/js code for production, run a development server that hot-reloads your code without page refresh and many such cool features.
 
-##Image?
+## Image?
 
-###Configuration
+### Configuration
 
 All of the configuration information are stored in webpack.config.js file. Config file needs to export a JS object that holds the configuration of webpack. Use NodeJS sytax for exporting.
 
@@ -55,7 +54,7 @@ module.exports = {
 
 ```
 
-###4 basic concepts for configuring webpack. 
+### 4 basic concepts for configuring webpack. 
 
 1. Entry point 
 2. Output point 
@@ -120,15 +119,15 @@ These concepts are properties of a weback module.
           module: {
             rules: [
                 {
-				    test: /\.js$/,
-				    exclude: /node_modules/,
-				    use: {
-					    use: ['babel-loader'],
-					    options: {
-						    presets: ['env']
-					    }
-				    }
+			test: /\.js$/,
+			exclude: /node_modules/,
+			use: {
+				use: ['babel-loader'],
+				options: {
+				presets: ['env']
+				}
 			    }
+		}
             ]
 	    }
 
@@ -151,8 +150,8 @@ These concepts are properties of a weback module.
 
           plugins: [
             new HtmlWebpackPlugin({
-			    template: config.HTML_ENTRY_POINT
-		    })
+		template: config.HTML_ENTRY_POINT
+		})
           ]
 
         ...
@@ -189,6 +188,7 @@ Adding html-webpack-plugin to attach bundle files to index.html
 ```
 npm install --save-dev html-webpack-plugin
 ```
+
 Create webpack.config.js file in root directory.
 
 ```
@@ -203,15 +203,17 @@ Create webpack.config.js file in root directory.
 
     }
 ```
+
 Add HtmlWebpackPlugin const to config file.
+
 ```
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 ```
 
 Activate plugin
+
 ```
     const HtmlWebpackPlugin = require('html-webpack-plugin');
-
     module.exports = {
 
         ...
