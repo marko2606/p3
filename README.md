@@ -192,12 +192,19 @@ Create webpack.config.js file in root directory.
 
 ```
     var path = require('path');
+    const config = {
+	HTML_ENTRY_POINT: './src/index.html',
+	JS_ENTRY_POINT: './src/index.js',
+	OUTPUT_PATH: 'dist',
+	OUTPUT_JS_FILENAME: 'bundle.js',
+	OUTPUT_CSS_FILENAME: 'bundle.css'
+};
 
     module.exports = {
         entry: './src/index.js',
         output: {
-            path: path.resolve(__dirname, 'dist'),
-            filename: 'bundle.js'
+            path: path.resolve(__dirname, OUTPUT_PATH),
+            filename: OUTPUT_JS_FILENAME
         }
 
     }
@@ -238,54 +245,153 @@ open index.html in dist
 
 
 
-### Install rimraf for cleaning dist and adding npm script for clean
+### Install rimraf 
+
+rimraf will delete all previous bundle files everytime when we run webpack. 
+
 ```
 npm install --save-dev rimraf
-npm run clean
+```
+Add rimraf to build script
+```
+scripts": {
+    "clean": "rimraf dist",
+    "build": "npm run clean && webpack",
+}
 ```
 
+### Add css [link](https://webpack.js.org/loaders/css-loader/)
 
-
-
-
-
-
-
-
-
-## Adding css [link](https://webpack.js.org/loaders/css-loader/)
 ```
 npm install --save-dev style-loader css-loader 
 ```
+css-loader takes care of importing css files
 
-## Adding sass [link](https://webpack.js.org/loaders/sass-loader/)
+css-style implements css rules on html file.
+
+
+
+### Adding sass [link](https://webpack.js.org/loaders/sass-loader/)
+
 ```
 npm install --save-dev sass-loader node-sass 
 ```
 
-## Adding extract-text-webpack-plugin to extract CSS to bundle.css
+### Adding extract-text-webpack-plugin to extract CSS to bundle.css
+
 ```
 npm install --save-dev extract-text-webpack-plugin
 ```
 
-## Adding bootstrap
+We need to add a rule to webpack module in order to handle css files and include it into html
+
+```
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+...
+
+module: {
+    rules: [
+    	{
+	test: /\.scss$/,
+	use: ExtractTextPlugin.extract({
+		use: ['css-loader','sass-loader']
+	     })
+	}
+    ]
+},
+plugins: [
+		new HtmlWebpackPlugin({
+			template: config.HTML_ENTRY_POINT
+		}),
+		new ExtractTextPlugin({
+		    filename: config.OUTPUT_CSS_FILENAME
+		})
+	]
+```
+
+### Adding bootstrap
+
 ```
 npm install --save-dev bootstrap-sass
 npm install --save-dev file-loader
 ```
 
-## Adding babel [link](https://webpack.js.org/loaders/babel-loader/)
+Add options to loader to handle bootstrap files
+
+```
+module: {
+	rules: [
+		{
+			test: /\.js$/,
+			exclude: /node_modules/,
+			use: {
+				loader: 'babel-loader',
+				options: {
+					presets: ['env']
+				}
+			}
+		},
+		{
+			test: /\.scss$/,
+			use: ExtractTextPlugin.extract({
+				use: [
+					{
+						loader: 'css-loader',
+						options: {
+							alias: {
+								'../fonts/bootstrap': 'bootstrap-sass/assets/fonts/bootstrap'
+							}
+						}
+					}, 
+					{
+						loader: 'sass-loader',
+						options: {
+							includePaths: [
+								path.resolve('./node_modules/bootstrap-sass/assets/stylesheets')
+							]
+						}
+					}
+				]
+			})
+		}	
+		
+```
+
+### Adding babel [link](https://webpack.js.org/loaders/babel-loader/)
 ```
 npm install --save-dev babel-loader babel-core babel-preset-env 
 ```
+Add a rule to module to handle js files
 
-## Build for production and adding to npm scripts
 ```
-webpack -p
-npm run build-prod
+module: {
+		rules: [
+			{
+				test: /\.js$/,
+				exclude: /node_modules/,
+				use: {
+					loader: 'babel-loader',
+					options: {
+						presets: ['env']
+					}
+				}
+			}
+```
+### Build for production and adding to npm scripts
+
+webpack -p command will provide us with a minified production file.
+
+webpack-dev-server command will run server localy and will not create a bundle files in dist folder. Instead those files are stored in memory.
+```
+ "scripts": {
+    "clean": "rimraf dist",
+    "build": "npm run clean && webpack",
+    "build-prod": "npm run clean && webpack -p",
+    "serve": "webpack-dev-server"
+  },
 ```
 
-## Adding Webpack Dev Server [link](https://webpack.js.org/configuration/dev-server/)
+### Adding Webpack Dev Server [link](https://webpack.js.org/configuration/dev-server/)
 ```
 npm install --save-dev webpack-dev-server
 ```
