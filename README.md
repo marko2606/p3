@@ -377,6 +377,12 @@ module: {
 				}
 			}
 ```
+
+### Adding Webpack Dev Server [link](https://webpack.js.org/configuration/dev-server/)
+```
+npm install --save-dev webpack-dev-server
+```
+
 ### Build for production and adding to npm scripts
 
 webpack -p command will provide us with a minified production file.
@@ -391,10 +397,6 @@ webpack-dev-server command will run server localy and will not create a bundle f
   },
 ```
 
-### Adding Webpack Dev Server [link](https://webpack.js.org/configuration/dev-server/)
-```
-npm install --save-dev webpack-dev-server
-```
 
 
 ## Get Started [link](https://webpack.js.org/guides/get-started/)
