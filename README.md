@@ -17,7 +17,7 @@ git checkout workshop1
 ## Table of Contents
 - [Requirements](##Requirements)
 - [Basic information](basic information)
-- [Basic information](##Basic information)
+- [Basic information](##Basicinformation)
 - [Creating project](##Creating project)
 - [Get Started](##GetStarted)
 - [Links](#links)
