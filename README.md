@@ -10,7 +10,7 @@ git branch
 # checkout master to get latest version of complete demo
 git checkout master
 
-# checkout workshop1 to get version from firt workshop
+# checkout workshop1 to get version from first workshop
 git checkout workshop1
 ```
 
@@ -23,11 +23,11 @@ git checkout workshop1
 
 ## Requirements
 
-You need to have NodeJS instaled.
+You need to have NodeJS installed.
 
 ## Basic information
 
-Webpack is a tool to build JavaScript modules in your application. It simplifies your workflow by quickly constructing a dependency graph of your application and bundling them in the right order. webpack can be configured to customise optimisations to your code, to split vendor/css/js code for production, run a development server that hot-reloads your code without page refresh and many such cool features.
+Webpack is a tool to build JavaScript modules in your application. It simplifies your workflow by quickly constructing a dependency graph of your application and bundling them in the right order. Webpack can be configured to customize optimizations to your code, to split vendor/css/js code for production, run a development server that hot-reloads your code without page refresh and many such cool features.
 
 <img src="https://webpack.github.io/assets/what-is-webpack.png"></img>
 
@@ -106,7 +106,7 @@ These concepts are properties of a weback module.
     - Module needs some rules property to tell it how to behave with certain file types.
     - test property tells webpack what rules apply on what file types.
     - Loader property tells the webpack what loader should use for that file(s). In this case we are using babel loader so we can use es6 syntax.
-    - When using multiple loaders order of that file in array is important because webpack will run your loaders in reverce order!
+    - When using multiple loaders order of that file in array is important because webpack will run your loaders in reverse order!
 
 
 ```
@@ -137,7 +137,7 @@ These concepts are properties of a weback module.
 
 4. Plugins
     - Similar to loaders. Plugin are applied to your bundle before it is outputted.
-    - Usage: To minify the code, dinamicly put js/css/images to you html... 
+    - Usage: To minify the code, dynamically put js/css/images to you html... 
 
 ```
     const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -161,7 +161,7 @@ These concepts are properties of a weback module.
 
 ## Creating a project
 
-Initalize a package.json. -y answers all the questions with 'yes'
+Initialize a package.json. -y answers all the questions with 'yes'
 
 ```
 npm init -y
@@ -235,17 +235,15 @@ Activate plugin
 
 ```
 
-Webpack will bundle our files into dist/bundle.js and also create a copy of index.html based on our configuration(Dinamicly change title from webpack);
+Webpack will bundle our files into dist/bundle.js and also create a copy of index.html based on our configuration (dynamically change title from webpack);
 
 run build
 
 open index.html in dist
 
-
-
 ### Install rimraf [link](https://www.npmjs.com/package/clean-webpack-plugin)
 
-rimraf will delete all previous bundle files everytime when we run webpack. 
+rimraf will delete all previous bundle files every time when we run webpack. 
 
 ```
 npm install --save-dev rimraf
