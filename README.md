@@ -167,7 +167,7 @@ Initalize a package.json. -y answers all the questions with 'yes'
 npm init -y
 ```
 
-### Install webpack[link](https://webpack.js.org/guides/installation/)
+### Install webpack [link](https://webpack.js.org/guides/installation/)
 
 ```
 npm install --save-dev webpack
@@ -181,7 +181,7 @@ create a build script in package.json
 }
 ```
 
-### Adding html-webpack-plugin to attach bundle files to index.html[link](https://webpack.js.org/plugins/html-webpack-plugin/)
+### Adding html-webpack-plugin to attach bundle files to index.html [link](https://webpack.js.org/plugins/html-webpack-plugin/)
 
 ```
 npm install --save-dev html-webpack-plugin
@@ -243,7 +243,7 @@ open index.html in dist
 
 
 
-### Install rimraf[link](https://www.npmjs.com/package/clean-webpack-plugin)
+### Install rimraf [link](https://www.npmjs.com/package/clean-webpack-plugin)
 
 rimraf will delete all previous bundle files everytime when we run webpack. 
 
@@ -275,7 +275,7 @@ css-style implements css rules on html file.
 npm install --save-dev sass-loader node-sass 
 ```
 
-### Adding extract-text-webpack-plugin to extract CSS to bundle.css[link](https://www.npmjs.com/package/extract-text-webpack-plugin)
+### Adding extract-text-webpack-plugin to extract CSS to bundle.css [link](https://www.npmjs.com/package/extract-text-webpack-plugin)
 
 ```
 npm install --save-dev extract-text-webpack-plugin
@@ -307,7 +307,7 @@ plugins: [
 	]
 ```
 
-### Adding bootstrap[link](https://webpack.js.org/loaders/css-loader/#alias)
+### Adding bootstrap [link](https://webpack.js.org/loaders/css-loader/#alias)
 
 ```
 npm install --save-dev bootstrap-sass
@@ -381,7 +381,7 @@ module: {
 npm install --save-dev webpack-dev-server
 ```
 
-### Build for production and adding to npm scripts[link](https://webpack.js.org/guides/production-build/)
+### Build for production and adding to npm scripts [link](https://webpack.js.org/guides/production-build/)
 
 webpack -p command will provide us with a minified production file.
 
