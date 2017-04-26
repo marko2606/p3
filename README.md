@@ -168,7 +168,7 @@ Initalize a package.json. -y answers all the questions with 'yes'
 npm init -y
 ```
 
-Install webpack
+### Install webpack
 
 ```
 npm install --save-dev webpack
@@ -182,7 +182,7 @@ create a build script in package.json
 }
 ```
 
-Adding html-webpack-plugin to attach bundle files to index.html
+### Adding html-webpack-plugin to attach bundle files to index.html
 
 ```
 npm install --save-dev html-webpack-plugin
@@ -238,11 +238,20 @@ open index.html in dist
 
 
 
-## Install rimraf for cleaning dist and adding npm script for clean
+### Install rimraf for cleaning dist and adding npm script for clean
 ```
 npm install --save-dev rimraf
 npm run clean
 ```
+
+
+
+
+
+
+
+
+
 
 ## Adding css [link](https://webpack.js.org/loaders/css-loader/)
 ```
