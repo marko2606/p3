@@ -202,8 +202,8 @@ Create webpack.config.js file in root directory.
     module.exports = {
         entry: './src/index.js',
         output: {
-            path: path.resolve(__dirname, OUTPUT_PATH),
-            filename: OUTPUT_JS_FILENAME
+            path: path.resolve(__dirname, config.OUTPUT_PATH),
+            filename: config.OUTPUT_JS_FILENAME
         }
 
     }
@@ -225,7 +225,7 @@ Activate plugin
 
      plugins: [
           new HtmlWebpackPlugin({
-              template: HTML_ENTRY_POINT
+              template: config.HTML_ENTRY_POINT
           })
       ]
 
