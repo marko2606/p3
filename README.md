@@ -226,8 +226,7 @@ Activate plugin
 
      plugins: [
           new HtmlWebpackPlugin({
-              template: './src/index.html',
-              title: 'Webpack Workshop'
+              template: HTML_ENTRY_POINT
           })
       ]
 
@@ -397,17 +396,10 @@ webpack-dev-server command will run server localy and will not create a bundle f
   },
 ```
 
-
-
-## Get Started [link](https://webpack.js.org/guides/get-started/)
-```
-npm install --save-dev webpack
-webpack
-```
-
-
 ## Links
+- [Get Started](https://webpack.js.org/guides/get-started/)
 - [NPM](https://www.npmjs.com)
 - [Webpack](https://webpack.js.org)
 - [Babel](https://babeljs.io)
 - [Webpack 2: The Complete Developer's Guide](https://www.udemy.com/webpack-2-the-complete-developers-guide/learn/v4/overview)
+- [Youtube tutorial](https://www.youtube.com/watch?v=GU-2T7k9NfI&list=PL55RiY5tL51rcCnrOrZixuOsZhAHHy6os)
