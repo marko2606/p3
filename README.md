@@ -83,7 +83,6 @@ These concepts are properties of a weback module.
     - JS object where we configure what the output should look like, where to store it and what to name it. 
     - Use path property to tell webpack where to store the files. Define path using nodejs syntax at the beginning of the webpack.config.js file. Call path.resolve(__dirname, 'dist'). '__dirname' refers to current directory, second argument refers to subdirectory where we want to store out files. Why are we using the output path.resolve method? The output path needs to be an absolute path. Webpack needs to write something there, to create something.
     - To set the name of the file we want to create we use filename property.
-    - Use publicPath to tell the webpack the location of where the files should be stored?
     ```
 
     var path = require('path');
@@ -235,8 +234,7 @@ Activate plugin
 
 ```
 
-Webpack will bundle our files into dist/bundle.js and also create a copy of index.html based on our configuration (dynamically change title from webpack);
-
+Webpack will bundle our files into dist/bundle.js and also create a copy of index.html based on our configuration.
 run build
 
 open index.html in dist
@@ -279,7 +277,7 @@ npm install --save-dev sass-loader node-sass
 npm install --save-dev extract-text-webpack-plugin
 ```
 
-We need to add a rule to webpack module in order to handle css files and include it into html
+We need to add a rule to webpack module in order to handle css files and include it into html.
 
 ```
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -312,7 +310,7 @@ npm install --save-dev bootstrap-sass
 npm install --save-dev file-loader
 ```
 
-Add options to loader to handle bootstrap files
+Add options to loader to handle bootstrap files.
 
 ```
 module: {
@@ -361,17 +359,17 @@ Add a rule to module to handle js files
 
 ```
 module: {
-		rules: [
-			{
-				test: /\.js$/,
-				exclude: /node_modules/,
-				use: {
-					loader: 'babel-loader',
-					options: {
-						presets: ['env']
-					}
-				}
+	rules: [
+		{
+			test: /\.js$/,
+			exclude: /node_modules/,
+			use: {
+				loader: 'babel-loader',
+				options: {
+					presets: ['env']
 			}
+		}
+	}
 ```
 
 ### Adding Webpack Dev Server [link](https://webpack.js.org/configuration/dev-server/)
