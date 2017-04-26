@@ -15,11 +15,10 @@ git checkout workshop1
 ```
 
 ## Table of Contents
-- [Requirements](##Requirements)
-- [Basic information](basic information)
-- [Basic information](##Basic&information)
-- [Creating project](##Creating project)
-- [Get Started](##GetStarted)
+- [Requirements](#Requirements)
+- [Basic information](#Basic&information)
+- [Creating project](#Creating&project)
+- [Get Started](#Get&Started)
 - [Links](#links)
 
 
